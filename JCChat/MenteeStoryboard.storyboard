@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messages" id="Tyk-Bh-hYO"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="Chat" id="Tyk-Bh-hYO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaT-64-sbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,6 +101,14 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fb-jb-GuY">
                                 <rect key="frame" x="222" y="289" width="107" height="30"/>
                                 <state key="normal" title="Mentee Friends"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPm-G0-bbQ">
+                                <rect key="frame" x="40" y="193" width="120" height="120"/>
+                                <state key="normal" image="Mentor Friends"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Nx-P3-cEZ">
+                                <rect key="frame" x="215" y="193" width="120" height="120"/>
+                                <state key="normal" image="Mentee Friends"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,8 +185,11 @@
     </scenes>
     <resources>
         <image name="Bible" width="25" height="25"/>
+        <image name="Chat" width="25" height="25"/>
         <image name="Home" width="25" height="25"/>
         <image name="Mentee" width="625" height="625"/>
+        <image name="Mentee Friends" width="625" height="625"/>
+        <image name="Mentor Friends" width="625" height="625"/>
         <image name="Search" width="25" height="25"/>
         <image name="User" width="25" height="25"/>
     </resources>
