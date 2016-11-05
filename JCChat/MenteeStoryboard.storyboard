@@ -283,7 +283,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mentor" translatesAutoresizingMaskIntoConstraints="NO" id="ExT-7C-uD0">
-                                <rect key="frame" x="15" y="20" width="149" height="128"/>
+                                <rect key="frame" x="20" y="20" width="122" height="122"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
