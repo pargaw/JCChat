@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bible" id="l9L-zN-VHX"/>
+                    <tabBarItem key="tabBarItem" title="Bible" image="Bible" id="l9L-zN-VHX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uS5-6i-Ym6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,12 +41,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaT-64-sbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1749" y="189"/>
+            <point key="canvasLocation" x="1838.5" y="182.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Knr-Rf-aqx">
             <objects>
-                <viewController title="Profile" id="SV3-uI-AhR" sceneMemberID="viewController">
+                <viewController title="Profile" id="SV3-uI-AhR" customClass="Profile" customModule="JCChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Wk-hZ-G73"/>
                         <viewControllerLayoutGuide type="bottom" id="Rc5-CN-TnE"/>
@@ -54,13 +54,65 @@
                     <view key="view" contentMode="scaleToFill" id="cwF-3l-yvZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zrX-JJ-SDY">
+                                <rect key="frame" x="74" y="410" width="226" height="29"/>
+                                <segments>
+                                    <segment title="Mentor"/>
+                                    <segment title="Mentee"/>
+                                </segments>
+                                <connections>
+                                    <action selector="modeState:" destination="SV3-uI-AhR" eventType="valueChanged" id="jyg-1n-rLp"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEb-nE-wNo">
+                                <rect key="frame" x="39" y="368" width="137" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mentee" translatesAutoresizingMaskIntoConstraints="NO" id="aFM-cW-LOh">
+                                <rect key="frame" x="39" y="37" width="72" height="72"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="j316" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlk-Wj-2gN">
+                                <rect key="frame" x="128" y="66" width="132" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYo-iK-S8x">
+                                <rect key="frame" x="39" y="135" width="123" height="30"/>
+                                <state key="normal" title="change username"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skZ-Ll-r6J">
+                                <rect key="frame" x="222" y="135" width="121" height="30"/>
+                                <state key="normal" title="change password"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIG-8d-oLU">
+                                <rect key="frame" x="128" y="37" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tax-p8-TmE">
+                                <rect key="frame" x="48" y="289" width="104" height="30"/>
+                                <state key="normal" title="Mentor Friends"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fb-jb-GuY">
+                                <rect key="frame" x="222" y="289" width="107" height="30"/>
+                                <state key="normal" title="Mentee Friends"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="7Nl-y6-FiJ"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="User" id="7Nl-y6-FiJ"/>
+                    <connections>
+                        <outlet property="mode" destination="zrX-JJ-SDY" id="E8N-UI-8og"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WE5-1L-ZDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895" y="1212"/>
+            <point key="canvasLocation" x="894.5" y="1211.5"/>
         </scene>
         <!--Search-->
         <scene sceneID="ACw-GL-rRc">
@@ -75,11 +127,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="IRK-ck-BjN"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="IRK-ck-BjN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2W0-Xj-Gvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="-488"/>
+            <point key="canvasLocation" x="1588.5" y="-577.5"/>
         </scene>
         <!--Home-->
         <scene sceneID="aVk-9n-CDI">
@@ -94,11 +146,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="4Jc-fC-Piv"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="4Jc-fC-Piv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAL-E1-WeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="-565"/>
+            <point key="canvasLocation" x="1005.5" y="-609.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iIR-p7-OyQ">
@@ -123,4 +175,11 @@
             <point key="canvasLocation" x="867" y="234"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bible" width="25" height="25"/>
+        <image name="Home" width="25" height="25"/>
+        <image name="Mentee" width="625" height="625"/>
+        <image name="Search" width="25" height="25"/>
+        <image name="User" width="25" height="25"/>
+    </resources>
 </document>
