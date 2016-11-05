@@ -25,7 +25,7 @@ class Profile: UIViewController {
             let alert = UIAlertController(title: "Become a Mentor", message: "To become a mentor, please apply on this link: www.JCchat.com/mentor", preferredStyle: .Alert)
             
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
-                print("you have pressed OK button");
+                //print("you have pressed OK button");
             }
             alert.addAction(OKAction)
             

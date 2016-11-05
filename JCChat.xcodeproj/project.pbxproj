@@ -12,6 +12,9 @@
 		468CB9FA1DCE25E300CB187A /* CoachStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468CB9F91DCE25E300CB187A /* CoachStoryboard.storyboard */; };
 		468CB9FC1DCE298F00CB187A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 468CB9FB1DCE298F00CB187A /* GoogleService-Info.plist */; };
 		65168E4F1DCE4F67002B2793 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E4E1DCE4F67002B2793 /* Profile.swift */; };
+		65168E531DCE7E43002B2793 /* NewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E521DCE7E43002B2793 /* NewsfeedController.swift */; };
+		65168E551DCE7F82002B2793 /* SearchControllerTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E541DCE7F82002B2793 /* SearchControllerTesting.swift */; };
+		65168E571DCE8900002B2793 /* MentorProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E561DCE8900002B2793 /* MentorProfileController.swift */; };
 		653AD58A1DCE1E8500CDB0C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653AD5891DCE1E8500CDB0C3 /* AppDelegate.swift */; };
 		653AD58C1DCE1E8500CDB0C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653AD58B1DCE1E8500CDB0C3 /* ViewController.swift */; };
 		653AD58F1DCE1E8500CDB0C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653AD58D1DCE1E8500CDB0C3 /* Main.storyboard */; };
@@ -46,6 +49,9 @@
 		468CB9FB1DCE298F00CB187A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		49F4441809FB4691A0EA7A2E /* Pods-JCChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCChatTests/Pods-JCChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65168E4E1DCE4F67002B2793 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		65168E521DCE7E43002B2793 /* NewsfeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedController.swift; sourceTree = "<group>"; };
+		65168E541DCE7F82002B2793 /* SearchControllerTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchControllerTesting.swift; sourceTree = "<group>"; };
+		65168E561DCE8900002B2793 /* MentorProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorProfileController.swift; sourceTree = "<group>"; };
 		653AD5861DCE1E8300CDB0C3 /* JCChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		653AD5891DCE1E8500CDB0C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		653AD58B1DCE1E8500CDB0C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +156,9 @@
 				653AD5951DCE1E8500CDB0C3 /* Info.plist */,
 				468CB9FB1DCE298F00CB187A /* GoogleService-Info.plist */,
 				65168E4E1DCE4F67002B2793 /* Profile.swift */,
+				65168E521DCE7E43002B2793 /* NewsfeedController.swift */,
+				65168E541DCE7F82002B2793 /* SearchControllerTesting.swift */,
+				65168E561DCE8900002B2793 /* MentorProfileController.swift */,
 			);
 			path = JCChat;
 			sourceTree = "<group>";
@@ -466,9 +475,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65168E531DCE7E43002B2793 /* NewsfeedController.swift in Sources */,
 				653AD58C1DCE1E8500CDB0C3 /* ViewController.swift in Sources */,
+				65168E571DCE8900002B2793 /* MentorProfileController.swift in Sources */,
 				65168E4F1DCE4F67002B2793 /* Profile.swift in Sources */,
 				653AD58A1DCE1E8500CDB0C3 /* AppDelegate.swift in Sources */,
+				65168E551DCE7F82002B2793 /* SearchControllerTesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
