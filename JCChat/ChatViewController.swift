@@ -17,6 +17,7 @@ class ChatViewController: JSQMessagesViewController {
     let incomingBubble = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor(red: 10/255, green: 180/255, blue: 230/255, alpha: 1.0))
     let outgoingBubble = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor.lightGrayColor())
     var messages = [JSQMessage]()
+    var messageModels = [Message]()
     
     var ref: FIRDatabaseReference!
     
@@ -30,7 +31,8 @@ class ChatViewController: JSQMessagesViewController {
         self.loadMessages()
 
         self.navigationItem.title = chatId
-        //self.addDemoMessages()
+        
+        print(NSDate().timeIntervalSince1970)
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,24 +53,30 @@ class ChatViewController: JSQMessagesViewController {
             } else {
                 print(snapshot.value)
                 let value = snapshot.value as! NSDictionary
+                
                 for (key, val) in value {
                     if (key as! String == "last_message") {
-                        print(val)
+                        //print(val)
                     }
                     else if (key as! String == "last_message_timestamp") {
                         
                     } else {
                         let chatValue = val as! NSDictionary
-                        let chatMessage = Message(from: chatValue["from"] as! String, text: chatValue["text"] as! String, timestamp: chatValue["timestamp"] as! Double)
-                        let message = JSQMessage(senderId: chatMessage.from, displayName: chatMessage.from, text: chatMessage.text as String)
-                        self.messages += [message]
+                        let chatMessage = Message(from: chatValue["from"] as! String, text: chatValue["text"] as! String, timestamp: chatValue["timestamp"] as! Double, index: Int((key as! NSString).intValue))
+                        self.messageModels.append(chatMessage)
                     }
                 }
+                self.messageModels.sortInPlace({ (message1, message2) -> Bool in
+                    return message1.timestamp < message2.timestamp
+                })
+                
+                for i in 0..<self.messageModels.count {
+                    self.messages.append(JSQMessage(senderId: self.messageModels[i].from, displayName: self.messageModels[i].from, text: self.messageModels[i].text as String))
+                }
+                
                 self.reloadMessagesView()
             }
         })
-        //let message = JSQMessage(senderId: "menteetemp1", displayName: "menteetemp1", text: "Hello, I have a question I was wondering if you could answer?")
-        //self.messages += [message]
 
     }
     
@@ -94,12 +102,11 @@ extension ChatViewController {
             self.messages += [message]
         }
         self.reloadMessagesView()
-        print("eqwrtrytuyrerwe")
     }
     
     func setup() {
-        self.senderId = UIDevice.currentDevice().identifierForVendor?.UUIDString
-        self.senderDisplayName = UIDevice.currentDevice().identifierForVendor?.UUIDString
+        self.senderId = "j316" // UIDevice.currentDevice().identifierForVendor?.UUIDString
+        self.senderDisplayName = "j316"// UIDevice.currentDevice().identifierForVendor?.UUIDString
     }
 }
 

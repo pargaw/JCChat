@@ -8,15 +8,46 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class Profile: UIViewController {
     
     @IBOutlet var mode:UISegmentedControl!
     
+    var currentUsername : String! = "j316"
+    
+    var ref : FIRDatabaseReference!
+    
+    var isMentor : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ref = FIRDatabase.database().reference()
+        
+        loadProfile(currentUsername)
+        
         mode.selectedSegmentIndex = 1
+    }
+    
+    func loadProfile(username : String) {
+        ref.child("users").child(username).observeSingleEventOfType(FIRDataEventType.Value, withBlock: { snapshot in
+            
+            if snapshot.value is NSNull {
+                
+            } else {
+                print(snapshot.value)
+                let value = snapshot.value as! NSDictionary
+                
+                let roles = value["roles"] as! NSArray
+                print(roles)
+                for val in roles {
+                    if (val as! String == "Mentor") {
+                        self.isMentor = false
+                    }
+                }
+            }
+        })
     }
     
     @IBAction func modeState(sender:UISegmentedControl) {

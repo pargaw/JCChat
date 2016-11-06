@@ -14,6 +14,7 @@ class Chat {
     var last_message_timestamp : Double!
     var last_updated_by : String!
     var title : String!
+    var numberOfMessages = 0
     
     init(title : String) {
         messages = [Message]()
@@ -22,9 +23,10 @@ class Chat {
     
     func postMessage(from: String, text: String) {
         let time = NSDate().timeIntervalSince1970
-        messages.append(Message(from: from, text: text, timestamp: time))
+        messages.append(Message(from: from, text: text, timestamp: time, index: numberOfMessages))
         last_message = text
         last_message_timestamp = time
         last_updated_by = from
+        numberOfMessages += 1
     }
 }

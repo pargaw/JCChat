@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class MessageTableViewController: UITableViewController {
 
     var yourChats = [Chat]()
     
+    var ref: FIRDatabaseReference!
+    
+    var currentUsername : String = "j316"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = FIRDatabase.database().reference()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -21,7 +28,7 @@ class MessageTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        populateDummyChats()
+        populateRealChats()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,10 +36,28 @@ class MessageTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func populateDummyChats() {
-        let dummyChat1 = Chat(title: "j388923r-menteetemp1")
-        dummyChat1.postMessage("menteetemp1", text: "Hello, I have a question I was wondering if you could answer?")
-        yourChats.append(dummyChat1)
+    func populateRealChats() {
+        let chats = ref.child("chats")
+        chats.observeSingleEventOfType(FIRDataEventType.Value, withBlock: { snapshot in
+            
+            if snapshot.value is NSNull {
+                
+            } else {
+                print(snapshot.value)
+                let value = snapshot.value as! NSDictionary
+                for (key, val) in value {
+                    let chatId = key as! String
+                    if (chatId.containsString(self.currentUsername)) {
+                        let chat = Chat(title: chatId)
+                        let last_message = val["last_message"] as! String
+                        chat.postMessage(self.currentUsername, text: last_message)
+                        self.yourChats.append(chat)
+                    }
+                }
+            }
+            self.tableView.reloadData()
+        })
+
     }
 
     // MARK: - Table view data source

@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,16 +15,17 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JCchat_landing (1)" translatesAutoresizingMaskIntoConstraints="NO" id="QfU-B9-ud3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JCchat_landing (1)" translatesAutoresizingMaskIntoConstraints="NO" id="QfU-B9-ud3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7E6-60-whQ">
-                                <rect key="frame" x="139" y="305" width="97" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7E6-60-whQ">
+                                <rect key="frame" x="252" y="301" width="97" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="3rT-sJ-fpj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
                                 <state key="normal" title="Mentor">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,9 +34,11 @@
                                     <segue destination="4ku-Fa-8R3" kind="show" id="vFa-SI-edS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzB-8d-ibR">
-                                <rect key="frame" x="123" y="445" width="129" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzB-8d-ibR">
+                                <rect key="frame" x="236" y="438" width="129" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="dBO-oL-fwN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
                                 <state key="normal" title="Mentee">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,11 +49,23 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7E6-60-whQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="281" id="4FD-Ga-dd5"/>
+                            <constraint firstItem="jzB-8d-ibR" firstAttribute="centerX" secondItem="7E6-60-whQ" secondAttribute="centerX" id="61L-1x-cd3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jzB-8d-ibR" secondAttribute="bottom" constant="81" id="Dp6-00-Z5b"/>
+                            <constraint firstAttribute="trailing" secondItem="QfU-B9-ud3" secondAttribute="trailing" id="OKK-Mn-QnP"/>
+                            <constraint firstItem="7E6-60-whQ" firstAttribute="centerY" secondItem="QfU-B9-ud3" secondAttribute="centerY" id="Oax-oe-mdX"/>
+                            <constraint firstItem="7E6-60-whQ" firstAttribute="centerX" secondItem="QfU-B9-ud3" secondAttribute="centerX" id="adS-kB-Zqb"/>
+                            <constraint firstItem="QfU-B9-ud3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dg7-jV-EwX"/>
+                            <constraint firstItem="jzB-8d-ibR" firstAttribute="top" secondItem="7E6-60-whQ" secondAttribute="bottom" constant="72" id="hyI-8u-RVL"/>
+                            <constraint firstItem="QfU-B9-ud3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iLO-xp-D3b"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="QfU-B9-ud3" secondAttribute="bottom" constant="-67" id="m9p-V4-I4V"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.200000000000003" y="407.94602698650675"/>
+            <point key="canvasLocation" x="47" y="407"/>
         </scene>
         <!--MenteeStoryboard-->
         <scene sceneID="MYd-yN-dJz">
