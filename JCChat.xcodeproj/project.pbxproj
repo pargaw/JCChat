@@ -13,7 +13,6 @@
 		468CB9FC1DCE298F00CB187A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 468CB9FB1DCE298F00CB187A /* GoogleService-Info.plist */; };
 		65168E4F1DCE4F67002B2793 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E4E1DCE4F67002B2793 /* Profile.swift */; };
 		65168E531DCE7E43002B2793 /* NewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E521DCE7E43002B2793 /* NewsfeedController.swift */; };
-		65168E551DCE7F82002B2793 /* SearchControllerTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E541DCE7F82002B2793 /* SearchControllerTesting.swift */; };
 		65168E571DCE8900002B2793 /* MentorProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E561DCE8900002B2793 /* MentorProfileController.swift */; };
 		653AD58A1DCE1E8500CDB0C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653AD5891DCE1E8500CDB0C3 /* AppDelegate.swift */; };
 		653AD58C1DCE1E8500CDB0C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653AD58B1DCE1E8500CDB0C3 /* ViewController.swift */; };
@@ -22,6 +21,7 @@
 		653AD5941DCE1E8500CDB0C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653AD5921DCE1E8500CDB0C3 /* LaunchScreen.storyboard */; };
 		653AD59F1DCE1E8500CDB0C3 /* JCChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653AD59E1DCE1E8500CDB0C3 /* JCChatTests.swift */; };
 		653AD5AA1DCE1E8500CDB0C3 /* JCChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653AD5A91DCE1E8500CDB0C3 /* JCChatUITests.swift */; };
+		659A05591DCFB259008EABAD /* BibleSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A05581DCFB259008EABAD /* BibleSearchController.swift */; };
 		96A188916751CC1DE7FF4243 /* Pods_JCChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CE5BC54C832C7ACB494E67 /* Pods_JCChatTests.framework */; };
 		9B49417D246E8CEF5FA42592 /* Pods_JCChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B2E88DFA3FBB9FB2FC77E7 /* Pods_JCChatUITests.framework */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,6 @@
 		49F4441809FB4691A0EA7A2E /* Pods-JCChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCChatTests/Pods-JCChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65168E4E1DCE4F67002B2793 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		65168E521DCE7E43002B2793 /* NewsfeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedController.swift; sourceTree = "<group>"; };
-		65168E541DCE7F82002B2793 /* SearchControllerTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchControllerTesting.swift; sourceTree = "<group>"; };
 		65168E561DCE8900002B2793 /* MentorProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorProfileController.swift; sourceTree = "<group>"; };
 		653AD5861DCE1E8300CDB0C3 /* JCChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		653AD5891DCE1E8500CDB0C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		653AD5A51DCE1E8500CDB0C3 /* JCChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JCChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		653AD5A91DCE1E8500CDB0C3 /* JCChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCChatUITests.swift; sourceTree = "<group>"; };
 		653AD5AB1DCE1E8500CDB0C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659A05581DCFB259008EABAD /* BibleSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibleSearchController.swift; sourceTree = "<group>"; };
 		72B2E88DFA3FBB9FB2FC77E7 /* Pods_JCChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF7A084D2EDBBF04261DC3D /* Pods-JCChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCChat/Pods-JCChat.release.xcconfig"; sourceTree = "<group>"; };
 		858C4ACEFC21058C597E0BCC /* Pods_JCChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,8 +157,8 @@
 				468CB9FB1DCE298F00CB187A /* GoogleService-Info.plist */,
 				65168E4E1DCE4F67002B2793 /* Profile.swift */,
 				65168E521DCE7E43002B2793 /* NewsfeedController.swift */,
-				65168E541DCE7F82002B2793 /* SearchControllerTesting.swift */,
 				65168E561DCE8900002B2793 /* MentorProfileController.swift */,
+				659A05581DCFB259008EABAD /* BibleSearchController.swift */,
 			);
 			path = JCChat;
 			sourceTree = "<group>";
@@ -479,8 +479,8 @@
 				653AD58C1DCE1E8500CDB0C3 /* ViewController.swift in Sources */,
 				65168E571DCE8900002B2793 /* MentorProfileController.swift in Sources */,
 				65168E4F1DCE4F67002B2793 /* Profile.swift in Sources */,
+				659A05591DCFB259008EABAD /* BibleSearchController.swift in Sources */,
 				653AD58A1DCE1E8500CDB0C3 /* AppDelegate.swift in Sources */,
-				65168E551DCE7F82002B2793 /* SearchControllerTesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

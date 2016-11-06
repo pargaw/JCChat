@@ -1,20 +1,20 @@
 //
-//  SearchControllerTesting.swift
+//  BibleSearchController.swift
 //  JCChat
 //
-//  Created by Grace Lam on 11/5/16.
+//  Created by Grace Lam on 11/6/16.
 //  Copyright © 2016 Grace Lam. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class SearchControllerTesting:UIViewController {
+class BibleSearchController:UIViewController {
     
-    @IBOutlet var yay:UIButton!
+    @IBOutlet var verse:UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
 }
