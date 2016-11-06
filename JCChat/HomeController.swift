@@ -35,6 +35,10 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         exploreView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.9)
         likeView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.9)
+        
+        if let nav = self.navigationController {
+            nav.navigationBarHidden = true
+        }
     
         /* exploreScrollView.contentSize = CGSize(width: CGFloat(topics.count)*exploreScrollView.frame.height, height: exploreScrollView.frame.height)
         for i in 0..<topics.count {
@@ -141,30 +145,32 @@ class HomeController: UIViewController {
     func reloadBubbles() {
         removeAllSubViews(exploreScrollView)
         removeAllSubViews(likeScrollView)
-        if let search = searchBar.text {
+        if var search = searchBar.text {
             exploreScrollView.contentSize = CGSize(width: CGFloat(topics.count)*exploreScrollView.frame.height, height: exploreScrollView.frame.height)
+            search = search.lowercaseString
+            print(search)
             for i in 0..<topics.count {
                 let topic = topics[i].lowercaseString
-                if (topic == "friendships") {
+                if (topic == "friendships" && (search.isEmpty || topic.hasPrefix(search))) {
                     let centerView = UIImageView(image: UIImage(named: "T_friendship"))
                     centerView.frame = CGRectMake(CGFloat(i)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
                     exploreScrollView.addSubview(centerView)
-                } else if (topic == "family") {
+                } else if (topic == "family" && (search.isEmpty || topic.hasPrefix(search))) {
                     let centerView = UIImageView(image: UIImage(named: "T_family"))
                     centerView.frame = CGRectMake(CGFloat(i)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
                     exploreScrollView.addSubview(centerView)
-                } else if (topic == "loneliness") {
+                } else if (topic == "loneliness" && (search.isEmpty || topic.hasPrefix(search))) {
                     let centerView = UIImageView(image: UIImage(named: "T_loneliness"))
                     centerView.frame = CGRectMake(CGFloat(i)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
                     exploreScrollView.addSubview(centerView)
-                } else if (topic == "love") {
+                } else if (topic == "love" && (search.isEmpty || topic.hasPrefix(search))) {
                     let centerView = UIImageView(image: UIImage(named: "T_love"))
                     centerView.frame = CGRectMake(CGFloat(i)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
-                    let tapRecognizer = UITapGestureRecognizer(target: self, action: "goToFeed")
+                    let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(HomeController.goToFeed))
                     centerView.addGestureRecognizer(tapRecognizer)
                     centerView.userInteractionEnabled = true
                     exploreScrollView.addSubview(centerView)
-                } else {
+                } else if (search.isEmpty || topic.hasPrefix(search)) {
                     let topicView = UIView(frame: CGRectMake(CGFloat(i) * exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height))
                     topicView.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.2)
                     
