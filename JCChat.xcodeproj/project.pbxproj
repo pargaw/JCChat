@@ -16,6 +16,7 @@
 		468CBA1B1DCEB51100CB187A /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468CBA191DCEB51100CB187A /* Chat.swift */; };
 		468CBA1C1DCEB51100CB187A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468CBA1A1DCEB51100CB187A /* ChatViewController.swift */; };
 		468CBA1E1DCEB51900CB187A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468CBA1D1DCEB51900CB187A /* HomeController.swift */; };
+		468CBA201DCFBA7D00CB187A /* BibleSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468CBA1F1DCFBA7D00CB187A /* BibleSearchController.swift */; };
 		65168E4F1DCE4F67002B2793 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E4E1DCE4F67002B2793 /* Profile.swift */; };
 		65168E531DCE7E43002B2793 /* NewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E521DCE7E43002B2793 /* NewsfeedController.swift */; };
 		65168E551DCE7F82002B2793 /* SearchControllerTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E541DCE7F82002B2793 /* SearchControllerTesting.swift */; };
@@ -57,6 +58,7 @@
 		468CBA191DCEB51100CB187A /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		468CBA1A1DCEB51100CB187A /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		468CBA1D1DCEB51900CB187A /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		468CBA1F1DCFBA7D00CB187A /* BibleSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibleSearchController.swift; sourceTree = "<group>"; };
 		49F4441809FB4691A0EA7A2E /* Pods-JCChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCChatTests/Pods-JCChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65168E4E1DCE4F67002B2793 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		65168E521DCE7E43002B2793 /* NewsfeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		653AD5881DCE1E8500CDB0C3 /* JCChat */ = {
 			isa = PBXGroup;
 			children = (
+				468CBA1F1DCFBA7D00CB187A /* BibleSearchController.swift */,
 				468CBA1D1DCEB51900CB187A /* HomeController.swift */,
 				468CBA191DCEB51100CB187A /* Chat.swift */,
 				468CBA1A1DCEB51100CB187A /* ChatViewController.swift */,
@@ -500,6 +503,7 @@
 				65168E551DCE7F82002B2793 /* SearchControllerTesting.swift in Sources */,
 				468CBA181DCEB50300CB187A /* MessageTableViewController.swift in Sources */,
 				468CBA1C1DCEB51100CB187A /* ChatViewController.swift in Sources */,
+				468CBA201DCFBA7D00CB187A /* BibleSearchController.swift in Sources */,
 				468CBA171DCEB50300CB187A /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

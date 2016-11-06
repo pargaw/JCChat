@@ -335,7 +335,7 @@ class HomeController: UIViewController {
     
     func goToFeed() {
         print("feed")
-        // self.performSegueWithIdentifier("goToFeed", sender: self)
+        self.performSegueWithIdentifier("toFeed", sender: self)
     }
     
     override func viewDidAppear(animated: Bool) {

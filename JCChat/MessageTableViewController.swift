@@ -124,9 +124,11 @@ class MessageTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if let destination = segue.destinationViewController as? ChatViewController {
-            destination.chatId = self.tableView.cellForRowAtIndexPath(self.tableView.indexPathForSelectedRow!)!.textLabel!.text!
-        }
+        //if let nav = segue.destinationViewController as? UINavigationController {
+            if let destination = segue.destinationViewController as? ChatViewController {
+                destination.chatId = self.tableView.cellForRowAtIndexPath(self.tableView.indexPathForSelectedRow!)!.textLabel!.text!
+            }
+        //}
     }
  
 

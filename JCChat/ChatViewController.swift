@@ -32,7 +32,9 @@ class ChatViewController: JSQMessagesViewController {
 
         self.navigationItem.title = chatId
         
-        print(NSDate().timeIntervalSince1970)
+        let backButton = UIBarButtonItem(title: "Chats", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        
+        navigationItem.backBarButtonItem = backButton
     }
 
     override func didReceiveMemoryWarning() {
