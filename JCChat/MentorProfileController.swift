@@ -30,5 +30,13 @@ class MentorProfileController:UIViewController {
     @IBAction func goToMessage(sender:UIButton) {
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let dest = segue.destinationViewController as? UINavigationController {
+            if let inside = dest.topViewController as? MessageTableViewController {
+                inside.fromHome = false
+            }
+        }
+    }
 
 }

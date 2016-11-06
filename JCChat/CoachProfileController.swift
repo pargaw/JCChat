@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-class Profile: UIViewController {
+class CoachProfileController: UIViewController {
     
     @IBOutlet var mode:UISegmentedControl!
     
-    var currentUsername : String! = "j316"
+    var currentUsername : String! = "mtr712"
     
     var ref : FIRDatabaseReference!
     

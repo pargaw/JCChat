@@ -17,6 +17,8 @@ class MessageTableViewController: UITableViewController {
     
     var currentUsername : String = "j316"
     
+    var fromHome : Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,8 +28,9 @@ class MessageTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
+        if (fromHome) {
+          self.navigationItem.leftBarButtonItem = nil
+        }
         populateRealChats()
     }
 
