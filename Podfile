@@ -9,6 +9,7 @@ target 'JCChat' do
   pod 'Firebase', '>= 2.5.1'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'JSQMessagesViewController'
 
   # Pods for JCChat
 
