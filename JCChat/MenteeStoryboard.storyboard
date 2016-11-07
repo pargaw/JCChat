@@ -612,6 +612,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JCchat_background" translatesAutoresizingMaskIntoConstraints="NO" id="Z78-pX-ZxQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JCchat_profile" translatesAutoresizingMaskIntoConstraints="NO" id="AEP-JU-WRg">
                                 <rect key="frame" x="0.0" y="20" width="375" height="658"/>
                             </imageView>
@@ -933,7 +936,7 @@
         <image name="Bible Tab Controller" width="752" height="101"/>
         <image name="Chat" width="25" height="25"/>
         <image name="Home" width="25" height="25"/>
-        <image name="JCchat_background" width="750" height="1334"/>
+        <image name="JCchat_background" width="375" height="667"/>
         <image name="JCchat_mprofile" width="750" height="1215"/>
         <image name="JCchat_profile" width="750" height="1334"/>
         <image name="JCchat_resources" width="750" height="1334"/>

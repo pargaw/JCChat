@@ -146,32 +146,35 @@ class HomeController: UIViewController {
         removeAllSubViews(exploreScrollView)
         removeAllSubViews(likeScrollView)
         if var search = searchBar.text {
-            exploreScrollView.contentSize = CGSize(width: CGFloat(topics.count)*exploreScrollView.frame.height, height: exploreScrollView.frame.height)
             search = search.lowercaseString
-            print(search)
+            var displayIndex = 0
             for i in 0..<topics.count {
                 let topic = topics[i].lowercaseString
                 if (topic == "friendships" && (search.isEmpty || topic.hasPrefix(search))) {
                     let centerView = UIImageView(image: UIImage(named: "T_friendship"))
-                    centerView.frame = CGRectMake(CGFloat(i)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
+                    centerView.frame = CGRectMake(CGFloat(displayIndex)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
                     exploreScrollView.addSubview(centerView)
+                    displayIndex += 1
                 } else if (topic == "family" && (search.isEmpty || topic.hasPrefix(search))) {
                     let centerView = UIImageView(image: UIImage(named: "T_family"))
-                    centerView.frame = CGRectMake(CGFloat(i)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
+                    centerView.frame = CGRectMake(CGFloat(displayIndex)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
                     exploreScrollView.addSubview(centerView)
+                    displayIndex += 1
                 } else if (topic == "loneliness" && (search.isEmpty || topic.hasPrefix(search))) {
                     let centerView = UIImageView(image: UIImage(named: "T_loneliness"))
-                    centerView.frame = CGRectMake(CGFloat(i)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
+                    centerView.frame = CGRectMake(CGFloat(displayIndex)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
                     exploreScrollView.addSubview(centerView)
+                    displayIndex += 1
                 } else if (topic == "love" && (search.isEmpty || topic.hasPrefix(search))) {
                     let centerView = UIImageView(image: UIImage(named: "T_love"))
-                    centerView.frame = CGRectMake(CGFloat(i)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
+                    centerView.frame = CGRectMake(CGFloat(displayIndex)*exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height)
                     let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(HomeController.goToFeed))
                     centerView.addGestureRecognizer(tapRecognizer)
                     centerView.userInteractionEnabled = true
                     exploreScrollView.addSubview(centerView)
+                    displayIndex += 1
                 } else if (search.isEmpty || topic.hasPrefix(search)) {
-                    let topicView = UIView(frame: CGRectMake(CGFloat(i) * exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height))
+                    let topicView = UIView(frame: CGRectMake(CGFloat(displayIndex) * exploreScrollView.frame.height, 0, exploreScrollView.frame.height, exploreScrollView.frame.height))
                     topicView.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.2)
                     
                     let topicLabel = UILabel(frame: CGRectMake(0, 0, exploreScrollView.frame.height, exploreScrollView.frame.height))
@@ -184,7 +187,7 @@ class HomeController: UIViewController {
                     
                     let circle = CAShapeLayer()
                     let imageFrame = topicView.frame
-                    let circleRect = CGRect(x: imageFrame.origin.x - CGFloat(i) * exploreScrollView.frame.height, y: imageFrame.origin.y, width: imageFrame.width, height: imageFrame.height)
+                    let circleRect = CGRect(x: imageFrame.origin.x - CGFloat(displayIndex) * exploreScrollView.frame.height, y: imageFrame.origin.y, width: imageFrame.width, height: imageFrame.height)
                     let circularPath = UIBezierPath(roundedRect: circleRect, byRoundingCorners: UIRectCorner.AllCorners, cornerRadii: CGSize(width: imageFrame.width, height: imageFrame.height))
                     circle.path = circularPath.CGPath
                     circle.lineWidth = 0
@@ -193,8 +196,11 @@ class HomeController: UIViewController {
                     topicView.layer.masksToBounds = true
                     
                     exploreScrollView.addSubview(topicView)
+                    displayIndex += 1
                 }
             }
+            
+            exploreScrollView.contentSize = CGSize(width: CGFloat(displayIndex)*exploreScrollView.frame.height, height: exploreScrollView.frame.height)
             
             likeScrollView.contentSize = CGSize(width: CGFloat(favorite_topics.count)*likeScrollView.frame.height, height: likeScrollView.frame.height)
             for i in 0..<favorite_topics.count {

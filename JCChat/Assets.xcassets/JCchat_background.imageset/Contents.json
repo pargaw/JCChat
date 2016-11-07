@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "JCchat_background.png",
+      "filename" : "jcchat_background_small.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "JCchat_background.png",
       "scale" : "2x"
     },
     {
