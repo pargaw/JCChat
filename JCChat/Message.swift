@@ -14,10 +14,9 @@ class Message {
     var timestamp : Double!
     var index : Int!
     
-    init(from : String, text: String, timestamp: Double, index: Int) {
+    init(from : String, text: String, timestamp: Double) {
         self.from = from
         self.text = text
         self.timestamp = timestamp
-        self.index = index
     }
 }

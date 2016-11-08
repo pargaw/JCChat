@@ -154,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00y-k3-PiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1613.5" y="676.5"/>
+            <point key="canvasLocation" x="1553.5" y="1271.5"/>
         </scene>
         <!--Bible-->
         <scene sceneID="4td-nX-bQZ">
@@ -303,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uS5-6i-Ym6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977.5" y="1081.5"/>
+            <point key="canvasLocation" x="1021.5" y="1271.5"/>
         </scene>
         <!--Newsfeed Controller-->
         <scene sceneID="H4A-aq-Kqv">
@@ -553,7 +553,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXa-LN-CcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1514.5" y="-302.5"/>
+            <point key="canvasLocation" x="1489.5" y="-610.5"/>
         </scene>
         <!--Mentor Profile Controller-->
         <scene sceneID="0SV-74-ZSP">
@@ -598,7 +598,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ijv-kj-alC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2013.5" y="-302.5"/>
+            <point key="canvasLocation" x="1961.5" y="-610.5"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="IAu-3i-xFk">
+            <objects>
+                <tableViewController id="pHL-Pt-3U4" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="230" sectionHeaderHeight="28" sectionFooterHeight="28" id="CKO-lP-b3q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsFeedCell" rowHeight="230" id="igr-Y4-mOk" customClass="NewsFeedCell" customModule="JCChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="230"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="igr-Y4-mOk" id="V4L-0a-gTP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="229.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pHL-Pt-3U4" id="Etd-Ne-slh"/>
+                            <outlet property="delegate" destination="pHL-Pt-3U4" id="Reo-RB-vZQ"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="raP-ec-R5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2550.5" y="-610.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Knr-Rf-aqx">
@@ -827,7 +856,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYg-HD-6qy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2750.5" y="-123.5"/>
+            <point key="canvasLocation" x="2762.5" y="574.5"/>
         </scene>
         <!--Messages-->
         <scene sceneID="Mew-gi-2oS">
@@ -838,16 +867,16 @@
                         <viewControllerLayoutGuide type="bottom" id="G6g-4A-fTx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uab-Pt-hE7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0bf-m8-lGM">
-                                <rect key="frame" x="24" y="580" width="490" height="30"/>
+                                <rect key="frame" x="20" y="580" width="269" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iJ-Jv-UJH">
-                                <rect key="frame" x="542" y="569" width="58" height="49"/>
+                                <rect key="frame" x="317" y="569" width="58" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="58" id="T7R-es-x9w"/>
                                 </constraints>
@@ -873,13 +902,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hidesBottomBarWhenPushed" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjO-Oh-lK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3935.5" y="574.5"/>
+            <point key="canvasLocation" x="3306.5" y="574.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dgk-s8-XAJ">
@@ -909,7 +939,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdV-GH-c4Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4417.5" y="574.5"/>
+            <point key="canvasLocation" x="3853.5" y="574.5"/>
         </scene>
         <!--Chat-->
         <scene sceneID="3n9-B6-r7w">
@@ -945,9 +975,9 @@
         <image name="User" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jG3-sn-ZVS"/>
+        <segue reference="Qkw-Xf-7FM"/>
         <segue reference="3Ro-vx-ZvH"/>
         <segue reference="Ddj-s4-lCF"/>
-        <segue reference="6hF-6w-TT4"/>
+        <segue reference="1Ng-1K-qsV"/>
     </inferredMetricsTieBreakers>
 </document>

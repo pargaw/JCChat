@@ -19,7 +19,9 @@ class ChatViewController: JSQMessagesViewController {
     var messages = [JSQMessage]()
     var messageModels = [Message]()
     
-    var ref: FIRDatabaseReference!
+    var ref : FIRDatabaseReference!
+    
+    var chat : FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,7 @@ class ChatViewController: JSQMessagesViewController {
     }
 
     func loadMessages() {
-        var chat = ref.child("chats").child(chatId)
+        chat = ref.child("chats").child(chatId)
         chat.observeSingleEventOfType(FIRDataEventType.Value, withBlock: { snapshot in
             
             if snapshot.value is NSNull {
@@ -64,7 +66,7 @@ class ChatViewController: JSQMessagesViewController {
                         
                     } else {
                         let chatValue = val as! NSDictionary
-                        let chatMessage = Message(from: chatValue["from"] as! String, text: chatValue["text"] as! String, timestamp: chatValue["timestamp"] as! Double, index: Int((key as! NSString).intValue))
+                        let chatMessage = Message(from: chatValue["from"] as! String, text: chatValue["text"] as! String, timestamp: chatValue["timestamp"] as! Double)
                         self.messageModels.append(chatMessage)
                     }
                 }
@@ -78,6 +80,10 @@ class ChatViewController: JSQMessagesViewController {
                 
                 self.reloadMessagesView()
             }
+        })
+        
+        chat.observeEventType(.ChildAdded, withBlock: { snapshot in
+            
         })
 
     }
@@ -148,6 +154,12 @@ extension ChatViewController {
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
         let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
         self.messages += [message]
+        let firebaseMessage : NSDictionary = [
+            "from" : senderId,
+            "text" : text,
+            "timestamp" : NSDate().timeIntervalSince1970
+        ]
+        chat.childByAutoId().setValue(firebaseMessage)
         self.finishSendingMessage()
     }
     

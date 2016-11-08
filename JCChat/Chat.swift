@@ -23,7 +23,7 @@ class Chat {
     
     func postMessage(from: String, text: String) {
         let time = NSDate().timeIntervalSince1970
-        messages.append(Message(from: from, text: text, timestamp: time, index: numberOfMessages))
+        messages.append(Message(from: from, text: text, timestamp: time))
         last_message = text
         last_message_timestamp = time
         last_updated_by = from
