@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A1791B619EE1DAEA6251A6F /* Pods_JCChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 858C4ACEFC21058C597E0BCC /* Pods_JCChat.framework */; };
+		4675C9141DD2871500E9C129 /* PostInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4675C9131DD2871500E9C129 /* PostInputCell.swift */; };
 		468CB9F81DCE25D900CB187A /* MenteeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468CB9F71DCE25D900CB187A /* MenteeStoryboard.storyboard */; };
 		468CB9FA1DCE25E300CB187A /* CoachStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468CB9F91DCE25E300CB187A /* CoachStoryboard.storyboard */; };
 		468CB9FC1DCE298F00CB187A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 468CB9FB1DCE298F00CB187A /* GoogleService-Info.plist */; };
@@ -19,6 +20,7 @@
 		468CBA201DCFBA7D00CB187A /* BibleSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468CBA1F1DCFBA7D00CB187A /* BibleSearchController.swift */; };
 		468CBA221DCFC4AC00CB187A /* CoachProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468CBA211DCFC4AC00CB187A /* CoachProfileController.swift */; };
 		468CBA241DD0712C00CB187A /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468CBA231DD0712C00CB187A /* NewsFeedCell.swift */; };
+		468CBA261DD23AE300CB187A /* TopicFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468CBA251DD23AE300CB187A /* TopicFeedController.swift */; };
 		65168E4F1DCE4F67002B2793 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E4E1DCE4F67002B2793 /* Profile.swift */; };
 		65168E531DCE7E43002B2793 /* NewsfeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E521DCE7E43002B2793 /* NewsfeedController.swift */; };
 		65168E551DCE7F82002B2793 /* SearchControllerTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65168E541DCE7F82002B2793 /* SearchControllerTesting.swift */; };
@@ -52,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4675C9131DD2871500E9C129 /* PostInputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostInputCell.swift; sourceTree = "<group>"; };
 		468CB9F71DCE25D900CB187A /* MenteeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MenteeStoryboard.storyboard; sourceTree = "<group>"; };
 		468CB9F91DCE25E300CB187A /* CoachStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoachStoryboard.storyboard; sourceTree = "<group>"; };
 		468CB9FB1DCE298F00CB187A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -63,6 +66,7 @@
 		468CBA1F1DCFBA7D00CB187A /* BibleSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibleSearchController.swift; sourceTree = "<group>"; };
 		468CBA211DCFC4AC00CB187A /* CoachProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachProfileController.swift; sourceTree = "<group>"; };
 		468CBA231DD0712C00CB187A /* NewsFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
+		468CBA251DD23AE300CB187A /* TopicFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicFeedController.swift; sourceTree = "<group>"; };
 		49F4441809FB4691A0EA7A2E /* Pods-JCChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCChatTests/Pods-JCChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65168E4E1DCE4F67002B2793 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		65168E521DCE7E43002B2793 /* NewsfeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedController.swift; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				65168E541DCE7F82002B2793 /* SearchControllerTesting.swift */,
 				65168E561DCE8900002B2793 /* MentorProfileController.swift */,
 				468CBA231DD0712C00CB187A /* NewsFeedCell.swift */,
+				468CBA251DD23AE300CB187A /* TopicFeedController.swift */,
+				4675C9131DD2871500E9C129 /* PostInputCell.swift */,
 			);
 			path = JCChat;
 			sourceTree = "<group>";
@@ -503,12 +509,14 @@
 				653AD58C1DCE1E8500CDB0C3 /* ViewController.swift in Sources */,
 				468CBA1E1DCEB51900CB187A /* HomeController.swift in Sources */,
 				468CBA221DCFC4AC00CB187A /* CoachProfileController.swift in Sources */,
+				4675C9141DD2871500E9C129 /* PostInputCell.swift in Sources */,
 				468CBA241DD0712C00CB187A /* NewsFeedCell.swift in Sources */,
 				65168E571DCE8900002B2793 /* MentorProfileController.swift in Sources */,
 				65168E4F1DCE4F67002B2793 /* Profile.swift in Sources */,
 				468CBA1B1DCEB51100CB187A /* Chat.swift in Sources */,
 				653AD58A1DCE1E8500CDB0C3 /* AppDelegate.swift in Sources */,
 				65168E551DCE7F82002B2793 /* SearchControllerTesting.swift in Sources */,
+				468CBA261DD23AE300CB187A /* TopicFeedController.swift in Sources */,
 				468CBA181DCEB50300CB187A /* MessageTableViewController.swift in Sources */,
 				468CBA1C1DCEB51100CB187A /* ChatViewController.swift in Sources */,
 				468CBA201DCFBA7D00CB187A /* BibleSearchController.swift in Sources */,

@@ -20,5 +20,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let tabController = segue.destinationViewController as? UITabBarController {
+            for var controller in tabController.childViewControllers {
+                if let home = controller as? HomeController {
+                    let button = sender as! UIButton
+                    home.currentRole = button.titleLabel?.text
+                }
+            }
+        }
+    }
 }
 

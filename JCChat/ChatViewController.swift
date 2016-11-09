@@ -30,13 +30,16 @@ class ChatViewController: JSQMessagesViewController {
 
         // Do any additional setup after loading the view.
         self.setup()
-        self.loadMessages()
 
         self.navigationItem.title = chatId
         
         let backButton = UIBarButtonItem(title: "Chats", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
         
         navigationItem.backBarButtonItem = backButton
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.loadMessages()
     }
 
     override func didReceiveMemoryWarning() {
@@ -135,13 +138,13 @@ extension ChatViewController {
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageBubbleImageDataSource! {
-        let data = messages[indexPath.row]
-        switch(data.senderId) {
-        case self.senderId:
-            return self.outgoingBubble
-        default:
-            return self.incomingBubble
-        }
+            let data = messages[indexPath.row]
+            switch(data.senderId) {
+            case self.senderId:
+                return self.outgoingBubble
+            default:
+                return self.incomingBubble
+            }
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
@@ -160,6 +163,8 @@ extension ChatViewController {
             "timestamp" : NSDate().timeIntervalSince1970
         ]
         chat.childByAutoId().setValue(firebaseMessage)
+        chat.child("last_message").setValue(text)
+        chat.child("last_message_timestamp").setValue(firebaseMessage["timestamp"])
         self.finishSendingMessage()
     }
     

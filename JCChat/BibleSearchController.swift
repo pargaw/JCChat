@@ -13,6 +13,8 @@ class BibleSearchController:UIViewController {
     
     @IBOutlet var verse:UIButton!
     
+    var currentRole : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

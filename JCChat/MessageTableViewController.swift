@@ -19,6 +19,8 @@ class MessageTableViewController: UITableViewController {
     
     var fromHome : Bool = true
     
+    var currentRole : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +29,6 @@ class MessageTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         if (fromHome) {
           self.navigationItem.leftBarButtonItem = nil
         }
@@ -46,7 +47,6 @@ class MessageTableViewController: UITableViewController {
             if snapshot.value is NSNull {
                 
             } else {
-                print(snapshot.value)
                 let value = snapshot.value as! NSDictionary
                 for (key, val) in value {
                     let chatId = key as! String

@@ -20,6 +20,8 @@ class Profile: UIViewController {
     
     var isMentor : Bool = false
     
+    var currentRole : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
